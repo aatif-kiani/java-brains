@@ -2,36 +2,37 @@ package org.confiz.javabrains;
 
 public class Triangle {
 	
-	private String type;
-	private int height;
+	private Point A;
+	private Point B;
+	private Point C;
 	
-	
-	public int getHeight() {
-		return height;
+	public Point getA() {
+		return A;
 	}
 
-	public Triangle(String type){
-		this.type = type;
-	}
-	
-	public Triangle(int height){
-		this.height = height;
-	}
-	
-	public Triangle(String type, int height){
-		this.type = type;
-		this.height = height;
-	}
-	
-	public String getType() {
-		return type;
+	public void setA(Point a) {
+		A = a;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public Point getB() {
+		return B;
+	}
+
+	public void setB(Point b) {
+		B = b;
+	}
+
+	public Point getC() {
+		return C;
+	}
+
+	public void setC(Point c) {
+		C = c;
 	}
 
 	public void draw() {
-		System.out.println(getType() + " Triangle Drawn of height " + getHeight());
+		System.out.println("Point A :" + getA());
+		System.out.println("Point B :" + getB());
+		System.out.println("Point C :" + getC());
 	}
 }

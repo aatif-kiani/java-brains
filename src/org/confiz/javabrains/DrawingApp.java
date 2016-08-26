@@ -12,8 +12,5 @@ public class DrawingApp {
 		Triangle triangle = (Triangle)factory.getBean("triangle");
 		triangle.draw();	
 		
-		Triangle triangle2 = (Triangle)factory.getBean("triangle2");
-		triangle2.draw();
 	}
-
 }
