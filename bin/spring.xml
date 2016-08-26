@@ -6,22 +6,28 @@
     http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
     
+    <bean id="zeroPoint" class="org.confiz.javabrains.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+    
 	<bean id="triangle" class="org.confiz.javabrains.Triangle">
-		<property name="A" ref="zeroPoint"></property>
-		<property name="B" ref="point2"></property>
-		<property name="C" ref="point3"></property>
+		<property name="A" ref="zeroPoint">
+		</property>
+		<property name="B">
+			<bean class="org.confiz.javabrains.Point">
+				<property name="x" value="-20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		<property name="C">
+			<bean class="org.confiz.javabrains.Point">
+				<property name="x" value="0"></property>
+				<property name="y" value="-20"></property>
+			</bean>
+		</property>
 	</bean>
 	
-	<bean id="zeroPoint" class="org.confiz.javabrains.Point">
-		<property name="x" value="0"></property>
-		<property name="y" value="0"></property>
-	</bean>
-	<bean id="point2" class="org.confiz.javabrains.Point">
-		<property name="x" value="-20"></property>
-		<property name="y" value="0"></property>
-	</bean>
-	<bean id="point3" class="org.confiz.javabrains.Point">
-		<property name="x" value="0"></property>
-		<property name="y" value="-20"></property>
-	</bean>
+	<alias name="triangle" alias="triangle-alias"/>
+	
 </beans>

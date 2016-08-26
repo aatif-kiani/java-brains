@@ -9,7 +9,7 @@ public class DrawingApp {
 		// TODO Auto-generated method stub
 		//Triangle triangle = new Triangle();
 		BeanFactory factory = new ClassPathXmlApplicationContext("spring.xml");
-		Triangle triangle = (Triangle)factory.getBean("triangle");
+		Triangle triangle = (Triangle)factory.getBean("triangle-alias");
 		triangle.draw();	
 		
 	}
