@@ -1,38 +1,22 @@
 package org.confiz.javabrains;
 
+import java.util.*;
+
 public class Triangle {
 	
-	private Point A;
-	private Point B;
-	private Point C;
+	private List<Point> points;
 	
-	public Point getA() {
-		return A;
+	public List<Point> getPoints() {
+		return points;
 	}
 
-	public void setA(Point a) {
-		A = a;
-	}
-
-	public Point getB() {
-		return B;
-	}
-
-	public void setB(Point b) {
-		B = b;
-	}
-
-	public Point getC() {
-		return C;
-	}
-
-	public void setC(Point c) {
-		C = c;
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
 
 	public void draw() {
-		System.out.println("Point A :" + getA());
-		System.out.println("Point B :" + getB());
-		System.out.println("Point C :" + getC());
+		for (Point point : points) {
+			System.out.println("Point : " + point);
+		}		
 	}
 }
